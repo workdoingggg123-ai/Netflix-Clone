@@ -371,4 +371,333 @@
         color: white;
     }
 
+    /* =========================
+   TABLET
+   768px - 1024px
+========================= */
+
+@media (max-width: 1024px) {
+
+    nav {
+        padding: 35px 50px;
+    }
+
+    nav img {
+        width: 150px;
+    }
+
+    .navright {
+        gap: 20px;
+        font-size: 18px;
+    }
+
+    .main {
+        height: 75vh;
+        min-height: 550px;
+    }
+
+    .content {
+        width: 85%;
+    }
+
+    .content h1 {
+        font-size: clamp(35px, 6vw, 55px);
+    }
+
+    .info {
+        width: 90%;
+    }
+
+    .video-info,
+    .reasons,
+    .faq {
+        margin: 40px;
+    }
+
+    .movie-photo {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .cointainer {
+        min-height: 230px;
+    }
+
+    .fq {
+        width: 90%;
+    }
+
+    .que-info > .info {
+        width: 80%;
+    }
+
+    footer {
+        width: 90%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   481px - 767px
+========================= */
+
+@media (max-width: 767px) {
+
+    nav {
+        padding: 25px 25px;
+        height: auto;
+    }
+
+    nav img {
+        width: 120px;
+    }
+
+    .navright {
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 7px 14px;
+        font-size: 14px;
+    }
+
+    .main {
+        height: 75vh;
+        min-height: 550px;
+    }
+
+    .content {
+        width: 90%;
+        gap: 12px;
+    }
+
+    .content h1 {
+        font-size: clamp(30px, 8vw, 45px);
+        margin-bottom: 15px;
+    }
+
+    .content span {
+        font-size: 15px;
+    }
+
+    .info {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info input {
+        width: 100%;
+        padding: 14px 18px;
+    }
+
+    .info button {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    #Terms {
+        font-size: 12px;
+    }
+
+    .video-info,
+    .reasons,
+    .faq {
+        margin: 30px 20px;
+    }
+
+    .video-info h2,
+    .reasons h2,
+    .faq h2 {
+        font-size: 25px;
+    }
+
+    .movie-photo {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .movie-card p {
+        margin: 10px 5px;
+        font-size: 14px;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cointainer {
+        min-height: 220px;
+        border-radius: 20px;
+    }
+
+    .cointainer h4 {
+        font-size: 22px;
+    }
+
+    .cointainer p {
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    .fq {
+        width: 100%;
+        margin: 6px 0;
+    }
+
+    .faq-cointainer p {
+        font-size: 18px;
+        margin: 20px;
+    }
+
+    #plus {
+        font-size: 30px;
+        padding: 15px;
+    }
+
+    .que p {
+        font-size: 15px;
+        margin: 25px 15px;
+    }
+
+    .que-info > .info {
+        width: 100%;
+    }
+
+    footer {
+        width: 90%;
+        gap: 20px;
+    }
+
+    .footer li {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   Up to 480px
+========================= */
+
+@media (max-width: 480px) {
+
+    nav {
+        padding: 20px 15px;
+    }
+
+    nav img {
+        width: 100px;
+    }
+
+    .navright {
+        gap: 7px;
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 6px 10px;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+
+    .main {
+        height: 80vh;
+        min-height: 520px;
+    }
+
+    .content {
+        width: 92%;
+    }
+
+    .content h1 {
+        font-size: 30px;
+        line-height: 1.15;
+    }
+
+    .content span {
+        font-size: 13px;
+    }
+
+    .info input {
+        padding: 12px 15px;
+    }
+
+    .info button {
+        font-size: 16px;
+    }
+
+    .movie-photo {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .movie-card p {
+        font-size: 13px;
+    }
+
+    .video-info,
+    .reasons,
+    .faq {
+        margin: 25px 15px;
+    }
+
+    .video-info h2,
+    .reasons h2,
+    .faq h2 {
+        font-size: 22px;
+    }
+
+    .cointainer {
+        min-height: 200px;
+    }
+
+    .cointainer h4 {
+        font-size: 20px;
+    }
+
+    .cointainer p {
+        font-size: 15px;
+        margin: 15px;
+    }
+
+    .faq-cointainer p {
+        font-size: 16px;
+        margin: 15px;
+    }
+
+    #plus {
+        font-size: 25px;
+        padding: 12px;
+    }
+
+    .fq {
+        min-height: 60px;
+    }
+
+    .que p {
+        font-size: 14px;
+        margin: 20px 10px;
+    }
+
+    footer {
+        width: 95%;
+        justify-content: space-between;
+    }
+
+    .footer li {
+        font-size: 13px;
+    }
+}
+
     
