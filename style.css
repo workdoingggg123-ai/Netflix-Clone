@@ -177,20 +177,17 @@
     .movie-slider{
         overflow: hidden;
         width :100%;
-
-
     }
     .movie-anime{
         display: flex;
         flex-shrink: 0;
-        width: 100%;
+        width: max-content;
         overflow: hidden;
     }
     .movie-photo{
         display: flex;
         flex-shrink: 0;
     gap: 30px; 
-
     animation: img-anima 90s linear infinite ;
    
     }
@@ -316,9 +313,14 @@
         background-color: #313030;
         
     }
-    
+    .answer {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #333;
+}
 
-    #plus{
+    .plus{
         font-size: 40px;
         margin-left: auto;
         padding: 20px;
