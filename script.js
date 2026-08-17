@@ -1,9 +1,10 @@
+
 let buttons = document.querySelectorAll(".button");
 let inputs = document.querySelectorAll(".Email");
 
 buttons.forEach(function(button) {
 
-    button.addEventListener("click", function() {
+    button.addEventListener("click", () => {
 
         let empty = false;
 
@@ -11,12 +12,16 @@ buttons.forEach(function(button) {
             if (input.value === "") {
                 empty = true;
             }
+            else{
+                input.value
+            }
         });
 
         if (empty) {
-            alert("Enter Mail First");
-        } else {
-            alert("You Have Successfully Login");
+            alert("Enter The Email To Login ..");
+        } 
+        else {
+            alert("You Have Login..");
         }
 
     });

@@ -307,7 +307,7 @@
 
     cursor: pointer;
 
-    margin: 5px 0;
+    margin: 10px 0px;
 
     display: flex;
     align-items: center;
@@ -328,35 +328,28 @@
   
 .answer {
     background-color: #2d2d2d;
-
     width: 100%;
-    margin-top: 2px;
-
     font-size: 25px;
     line-height: 1.4;
-
     overflow: hidden;
-
     max-height: 0;
     padding: 0 30px;
-
     opacity: 0;
-
     transition:
         max-height 0.4s ease,
         padding 0.4s ease,
         opacity 0.3s ease;
+ 
 }
 
 
-/* When question is clicked */
+
 .answer.show {
     max-height: 300px;
-
     padding: 30px;
     margin:10px 0px ;
-
-    opacity: 1;
+    opacity:1;
+       
 }
 
 
@@ -439,124 +432,238 @@
     }
 
 
+/* =========================================================
+   TABLET
+   768px - 1024px
+========================================================= */
+
 @media (max-width: 1024px) {
 
+    /* ---------- NAV ---------- */
+
     nav {
-        padding: 35px 50px;
+        padding: 30px 5vw;
+        height: auto;
     }
 
     nav img {
-        width: 150px;
+        width: 140px;
     }
 
     .navright {
-        gap: 20px;
-        font-size: 18px;
+        gap: 15px;
+        font-size: 16px;
     }
 
+
+    /* ---------- HERO ---------- */
+
     .main {
+        min-height: 600px;
         height: 75vh;
-        min-height: 550px;
     }
 
     .content {
-        width: 85%;
+        width: min(850px, 90%);
+        margin-top: 80px;
+        gap: 15px;
     }
 
     .content h1 {
-        font-size: clamp(35px, 6vw, 55px);
+        font-size: clamp(36px, 6vw, 55px);
+        margin-bottom: 15px;
+    }
+
+    .content span {
+        font-size: clamp(15px, 2vw, 19px);
     }
 
     .info {
         width: 90%;
+        max-width: 750px;
+        display: flex;
+        flex-direction: row;
     }
+
+    .info input {
+        flex: 2;
+        min-width: 0;
+    }
+
+    .info button {
+        flex: 1;
+        min-width: 160px;
+    }
+
+
+    /* ---------- SECTIONS ---------- */
 
     .video-info,
     .reasons,
     .faq {
-        margin: 40px;
+        margin: 40px 5vw;
     }
+
+    .video-info h2,
+    .reasons h2,
+    .faq h2 {
+        font-size: 30px;
+    }
+
+
+    /* ---------- MOVIES ---------- */
 
     .movie-photo {
         gap: 20px;
     }
 
+    .movie-card img {
+        width: 180px;
+    }
+
+    .movie-card p {
+        font-size: 16px;
+        margin: 12px 5px;
+    }
+
+
+    /* ---------- REASONS GRID ---------- */
+
     .card {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
         gap: 20px;
     }
 
     .cointainer {
-        min-height: 230px;
+        min-height: 240px;
+        border-radius: 25px;
+    }
+
+    .cointainer h4 {
+        font-size: 22px;
+    }
+
+    .cointainer p {
+        font-size: 17px;
+        margin: 20px;
+    }
+
+
+    /* ---------- FAQ ---------- */
+
+    .faq-cointainer {
+        margin: 20px 0;
     }
 
     .fq {
-        width: 90%;
+        width: 100%;
+        min-height: 70px;
     }
 
-    .que-info > .info {
-        width: 80%;
+    .faq-cointainer p {
+        font-size: 20px;
+        padding: 20px;
     }
+
+    .plus {
+        font-size: 32px;
+        padding: 15px;
+        flex-shrink: 0;
+    }
+
+    .answer {
+        font-size: 19px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .answer.show {
+        max-height: 400px;
+        padding: 20px;
+    }
+
+
+    /* ---------- BOTTOM EMAIL ---------- */
+
+    .que-info > .info {
+        width: 85%;
+    }
+
+
+    /* ---------- FOOTER ---------- */
 
     footer {
         width: 90%;
+        max-width: 1000px;
+        gap: 30px;
     }
 
-    /* FAQ text only */
-    .answer {
-        font-size: 20px;
-    }
-
-    .arrow.arr-show {
-        width: 35px;
-        margin: 15px;
+    .footer li {
+        font-size: 15px;
     }
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
    481px - 767px
-========================= */
+========================================================= */
 
 @media (max-width: 767px) {
 
+    /* ---------- NAV ---------- */
+
     nav {
-        padding: 25px;
+        padding: 20px;
         height: auto;
+        flex-wrap: nowrap;
     }
 
     nav img {
-        width: 120px;
+        width: 110px;
     }
 
     .navright {
-        gap: 10px;
-        font-size: 15px;
+        gap: 8px;
+        font-size: 13px;
     }
 
     .btn {
-        padding: 7px 14px;
-        font-size: 14px;
+        padding: 7px 12px;
+        font-size: 13px;
     }
 
+
+    /* ---------- HERO ---------- */
+
     .main {
-        height: 75vh;
-        min-height: 550px;
+        min-height: 600px;
+        height: 78vh;
+        background-position: center;
     }
 
     .content {
-        width: 90%;
+        width: 92%;
+        margin-top: 70px;
         gap: 12px;
     }
 
     .content h1 {
-        font-size: clamp(30px, 8vw, 45px);
-        margin-bottom: 15px;
+        font-size: clamp(30px, 8vw, 44px);
+        line-height: 1.15;
+        margin-bottom: 10px;
     }
 
     .content span {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.4;
     }
+
+
+    /* ---------- EMAIL FORM ---------- */
 
     .info {
         width: 100%;
@@ -566,18 +673,24 @@
 
     .info input {
         width: 100%;
-        padding: 14px 18px;
+        min-width: 0;
+        padding: 14px 16px;
     }
 
     .info button {
         width: 100%;
-        padding: 10px;
-        font-size: 18px;
+        min-width: 0;
+        padding: 12px;
+        font-size: 17px;
     }
 
     #Terms {
-        font-size: 12px;
+        font-size: 11px;
+        line-height: 1.4;
     }
+
+
+    /* ---------- SECTIONS ---------- */
 
     .video-info,
     .reasons,
@@ -589,19 +702,46 @@
     .reasons h2,
     .faq h2 {
         font-size: 25px;
+        line-height: 1.2;
+    }
+
+
+    /* ---------- MOVIE SLIDER ---------- */
+
+    .movie-slider {
+        width: 100%;
+        overflow: hidden;
     }
 
     .movie-photo {
         gap: 15px;
     }
 
-    .movie-card p {
-        margin: 10px 5px;
-        font-size: 14px;
+    .movie-card {
+        width: 140px;
     }
 
+    .movie-card img {
+        width: 140px;
+        height: 210px;
+        object-fit: cover;
+    }
+
+    .movie-card p {
+        font-size: 14px;
+        margin: 10px 3px;
+    }
+
+
+    /* ---------- REASONS ---------- */
+
     .card {
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(180px, 1fr)
+        );
+        gap: 15px;
     }
 
     .cointainer {
@@ -610,180 +750,370 @@
     }
 
     .cointainer h4 {
-        font-size: 22px;
+        font-size: 20px;
+        margin: 15px;
     }
 
     .cointainer p {
-        font-size: 16px;
-        margin: 20px;
+        font-size: 15px;
+        line-height: 1.4;
+        margin: 15px;
+    }
+
+
+    /* ---------- FAQ ---------- */
+
+    .faq-cointainer {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .que-ans {
+        width: 100%;
     }
 
     .fq {
         width: 100%;
-        margin: 6px 0;
+        min-height: 65px;
+        margin: 5px 0;
     }
 
     .faq-cointainer p {
-        font-size: 18px;
-        margin: 20px;
+        font-size: 17px;
+        padding: 15px;
+        margin: 0;
     }
 
     .plus {
-        font-size: 30px;
-        padding: 15px;
+        font-size: 28px;
+        padding: 12px;
+        margin-left: auto;
+        flex-shrink: 0;
     }
 
+    .answer {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0 15px;
+    }
+
+    .answer.show {
+        max-height: 500px;
+        padding: 15px;
+        margin: 5px 0;
+    }
+
+
+    /* ---------- BOTTOM EMAIL ---------- */
+
     .que p {
-        font-size: 15px;
-        margin: 25px 15px;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 20px 10px;
+    }
+
+    .que-info {
+        width: 100%;
     }
 
     .que-info > .info {
         width: 100%;
     }
 
+
+    /* ---------- FOOTER ---------- */
+
     footer {
         width: 90%;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 15px;
     }
 
     .footer li {
-        font-size: 14px;
+        font-size: 13px;
         margin-bottom: 12px;
-    }
-
-    /* FAQ toggle sizing only */
-    .answer {
-        font-size: 18px;
-    }
-
-    .arrow.arr-show {
-        width: 30px;
-        margin: 12px;
     }
 }
 
 
-/* =========================
+/* =========================================================
    SMALL MOBILE
-   Up to 480px
-========================= */
+   0px - 480px
+========================================================= */
 
 @media (max-width: 480px) {
 
+    /* ---------- NAV ---------- */
+
     nav {
-        padding: 20px 15px;
+        padding: 18px 12px;
     }
 
     nav img {
-        width: 100px;
+        width: 95px;
     }
 
     .navright {
-        gap: 7px;
-        font-size: 13px;
+        gap: 5px;
+        font-size: 11px;
     }
 
     .btn {
-        padding: 6px 10px;
-        font-size: 12px;
+        padding: 6px 9px;
+        font-size: 11px;
         border-radius: 4px;
     }
 
+
+    /* ---------- HERO ---------- */
+
     .main {
+        min-height: 560px;
         height: 80vh;
-        min-height: 520px;
     }
 
     .content {
-        width: 92%;
+        width: 94%;
+        margin-top: 60px;
+        gap: 10px;
     }
 
     .content h1 {
-        font-size: 30px;
-        line-height: 1.15;
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 10px;
     }
 
     .content span {
         font-size: 13px;
     }
 
+
+    /* ---------- EMAIL ---------- */
+
+    .info {
+        width: 100%;
+        gap: 8px;
+    }
+
     .info input {
-        padding: 12px 15px;
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    input::placeholder {
+        font-size: 13px;
     }
 
     .info button {
-        font-size: 16px;
+        padding: 11px;
+        font-size: 15px;
     }
 
-    .movie-photo {
-        gap: 15px;
+    #Terms {
+        font-size: 10px;
     }
 
-    .movie-card p {
-        font-size: 13px;
-    }
+
+    /* ---------- SECTIONS ---------- */
 
     .video-info,
     .reasons,
     .faq {
-        margin: 25px 15px;
+        margin: 25px 12px;
     }
 
     .video-info h2,
     .reasons h2,
     .faq h2 {
-        font-size: 22px;
+        font-size: 21px;
+    }
+
+
+    /* ---------- MOVIES ---------- */
+
+    .movie-photo {
+        gap: 12px;
+    }
+
+    .movie-card {
+        width: 115px;
+    }
+
+    .movie-card img {
+        width: 115px;
+        height: 172px;
+    }
+
+    .movie-card p {
+        font-size: 12px;
+        margin: 8px 2px;
+    }
+
+
+    /* ---------- REASONS GRID ---------- */
+
+    .card {
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 
     .cointainer {
-        min-height: 200px;
+        min-height: 180px;
+        border-radius: 18px;
     }
 
     .cointainer h4 {
-        font-size: 20px;
+        font-size: 18px;
+        margin: 14px;
     }
 
     .cointainer p {
-        font-size: 15px;
-        margin: 15px;
+        font-size: 14px;
+        margin: 14px;
+        line-height: 1.4;
     }
 
-    .faq-cointainer p {
-        font-size: 16px;
-        margin: 15px;
-    }
 
-    .plus {
-        font-size: 25px;
-        padding: 12px;
+    /* ---------- FAQ ---------- */
+
+    .faq-cointainer {
+        margin: 15px 0;
     }
 
     .fq {
-        min-height: 60px;
+        min-height: 58px;
     }
+
+    .faq-cointainer p {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .plus {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .answer {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .answer.show {
+        max-height: 600px;
+        padding: 14px;
+    }
+
+
+    /* ---------- BOTTOM FORM ---------- */
 
     .que p {
-        font-size: 14px;
-        margin: 20px 10px;
+        font-size: 13px;
+        margin: 15px 5px;
     }
 
+    .que-info > .info {
+        width: 100%;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
     footer {
-        width: 95%;
-        justify-content: space-between;
+        width: 92%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
     }
 
     .footer li {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+   0px - 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    nav {
+        padding: 15px 10px;
+    }
+
+    nav img {
+        width: 85px;
+    }
+
+    .navright {
+        gap: 4px;
+        font-size: 10px;
+    }
+
+    .btn {
+        padding: 5px 7px;
+        font-size: 10px;
+    }
+
+    .main {
+        min-height: 540px;
+    }
+
+    .content {
+        width: 95%;
+    }
+
+    .content h1 {
+        font-size: 25px;
+    }
+
+    .content span {
+        font-size: 12px;
+    }
+
+
+    /* Movie cards become smaller */
+
+    .movie-card {
+        width: 100px;
+    }
+
+    .movie-card img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .movie-card p {
+        font-size: 11px;
+    }
+
+
+    /* FAQ */
+
+    .faq-cointainer p {
+        font-size: 14px;
+    }
+
+    .plus {
+        font-size: 21px;
+        padding: 8px;
+    }
+
+    .answer {
         font-size: 13px;
     }
 
-    /* FAQ toggle sizing only */
-    .answer {
-        font-size: 16px;
-    }
 
-    .arrow.arr-show {
-        width: 25px;
-        margin: 10px;
+    /* Footer */
+
+    footer {
+        grid-template-columns: repeat(2,1fr);
+        gap: 5px;
+        margin-left:50px ;
     }
 }
