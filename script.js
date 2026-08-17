@@ -23,19 +23,18 @@ buttons.forEach(function(button) {
 
 });
 
-let questions = document.querySelectorAll(".fq");
+let questions = document.querySelectorAll(".que-ans");
 
 questions.forEach(function (question) {
 
     let plus = question.querySelector(".plus");
     let answer = question.querySelector(".answer");
-    let arrow   = question.querySelector(".arrow")
+
     question.addEventListener("click", function () {
 
         answer.classList.toggle("show");
-        arrow.classList.toggle("arr-show")
 
-        if (answer.classList.contains("show") && arrow.classList.contains("arr-show")) {
+        if (answer.classList.contains("show")) {
             plus.textContent = "×";
         } else {
             plus.textContent = "+";
